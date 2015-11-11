@@ -14,7 +14,7 @@ get_header();
 </div>
 
 <div class="banners">
-	<div class="banner-page">
+	<div class="banner-page" name="responsive">
 		<div class="home-image">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/responsive.png" alt="Diseño responsive" title="Diseño responsive" width="800" height="571" >
 		</div>
@@ -30,7 +30,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="banner-page">
+	<div class="banner-page" name="html5">
 		<div class="home-image">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/html5-css3.png" alt="Las últimas tecnologías" title="Las últimas tecnologías" width="800" height="571" >
 		</div>
@@ -47,7 +47,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="banner-page">
+	<div class="banner-page" name="wordpress">
 		<div class="home-image">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/wordpress.png" alt="WordPress" title="Las últimas tecnologías" width="800" height="600" >
 		</div>
