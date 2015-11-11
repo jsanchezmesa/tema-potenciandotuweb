@@ -1,0 +1,692 @@
+@import "mixins";
+@import "fonts";
+
+//fuente general
+body {
+    font-family: "Source Sans Pro", sans-serif;
+  	font-size: 18px;
+}
+
+//fondo gris en desktop
+@media screen and (min-width: 1024px) {
+  	body {
+    	background-color: $grisClaro;
+  	}
+}
+
+//fuente y color de encabezados
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  	font-family: "Montserrat", sans-serif;
+  	color: $rojo;
+    font-weight: normal;
+}
+
+//imagenes responsive
+img {
+  	max-width: 100%;
+  	height: auto;
+}
+
+//enlaces general
+a {
+  	text-decoration: none;
+  	color: $rojo;
+
+  	&:hover{
+  		color: $grisOscuro;
+  	}
+}
+
+//textarea general
+textarea {
+  	resize: none;
+  	max-width: 100%;
+}
+
+//header principal
+.Header {
+  	width: 100%;
+  	background-color: $rojo;
+  	padding: 0.5em 0;
+
+  	//enlace a pagina de inicio en header
+  	&-link {
+	   text-decoration: none;
+  	}
+
+  	//logotipo
+  	&-logo {
+        max-width: 10%;
+    	display: inline;
+    	vertical-align: middle;
+  	}
+
+  	//h1 de encabezado
+  	&-title {
+        font-size: 1.5em;
+	    display: inline;
+	    vertical-align: middle;
+	    font-family: "Montserrat", sans-serif;
+	    color: $blanco;
+    	margin: 0;
+
+        &:hover{
+            text-shadow: 0 0 1em $negro;
+        }
+  	}
+}
+
+//header en tablet
+@media screen and (min-width: 768px) {
+  	.Header {
+	    margin-top: 3.75em;
+    	text-align: center;
+    }
+}
+
+//header en desktop
+@media screen and (min-width: 1024px) {
+  	.Header {
+    	margin-top: 0;
+    	text-align: left;
+      @include display-flex;
+      @include flex-space-between;
+      @include align-items-center;
+
+    	&-link {
+      		//width: 50%;
+      		//margin-left: 2em;
+    	}
+  	}
+}
+
+//menu principal oculto en movil
+.MainMenu {
+  	background-color: $grisOscuro;
+  	width: 250px;
+  	left: -250px;
+  	@include transition(0.3s);
+  	position: fixed;
+  	top: 0;
+    z-index: 3;
+
+  	//quitamos los margenes y padding en menu
+  	.menu {
+	    @include reset-box;
+  	}
+
+  	//mostrar el menu
+  	&.is-active {
+    	left: 0;
+  	}
+
+  	//enlaces del menu
+  	a {
+	    text-align: center;
+    	color: $blanco;
+    	text-decoration: none;
+    	text-transform: uppercase;
+    	font-size: 1em;
+    	display: block;
+    	height: 3em;
+    	line-height: 3em;
+  	}
+
+  	//boton de menu en movil
+  	&-button {
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    border-radius: 50%;
+	    background-color: $blanco;
+	    border: 0.1em solid $grisMedio;
+	    color: $rojo;
+	    position: fixed;
+	    z-index: 3;
+	    right: 0.5em;
+	    top: 0.5em;
+	    outline: 0;
+	    display: none;
+	    vertical-align: middle;
+
+	    &.is-active {
+      	display: block;
+    	}
+  	}
+}
+
+//menu en tablet
+@media screen and (min-width: 768px) {
+  	.MainMenu {
+	    background-color: $grisOscuro;
+	    width: 100%;
+	    left: 0;
+    	height: 3.75em;
+
+    	.menu-item {
+      		display: inline;
+      		margin: 0 1em;
+    	}
+
+    	a {
+      		height: 3.75em;
+      		line-height: 3.75em;
+      		display: inline;
+    	}
+
+    	&-button.is-active {
+      		display: none;
+    	}
+  	}
+}
+
+//menu en desktop
+@media screen and (min-width: 1024px) {
+  	.MainMenu {
+	    background-color: $rojo;
+	    width: 60%;
+	    position: initial;
+    	//float: right;
+      @include display-flex;
+      @include flex-space-around;
+
+    	.menu-item {
+      		margin: 0 2em;
+    	}
+
+    	a:hover {
+      		color: $grisOscuro;
+    	}
+  	}
+}
+
+//contenedor general
+.wrapper {
+  	width: 100%;
+}
+
+.section-main-home {
+    background-color: $blanco;
+}
+
+//encabezado de la pagina home
+.home-title {
+   	width: 100%;
+    background-color: $grisOscuro;
+    padding: 1em 0;
+    text-align: center;
+    background-image: url('images/fondo-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        color: $grisClaro;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        text-shadow: -1px -1px 0 $grisOscuro,
+                    1px -1px 0 $grisOscuro,
+                    -1px 1px 0 $grisOscuro,
+                    1px 1px 0 $grisOscuro;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home-title {
+        padding: 4em 0;
+        text-align: right;
+
+        h1 {
+            width: 40%;
+        }
+    }
+}
+
+//banner de la pagina home
+.banners {
+    //@include display-flex;
+    //@include flex-direction-column;
+
+    //-webkit-align-items: flex-start;
+    //align-items: flex-start;
+}
+
+.banner-home, .banner-page {
+
+    .home-text {
+
+        h2{
+            color: $negro;
+        }
+
+        h3{
+            color: $grisOscuro;
+        }
+
+        a {
+            background-color: $rojo;
+            color: $blanco;
+            text-transform: uppercase;
+            padding: .5em 1em;
+            border-bottom: 5px solid $grisOscuro;
+
+            &:hover {
+                background-color: $grisOscuro;
+                border-bottom: 5px solid $rojo;
+            }
+        }
+    }
+}
+
+.banner-home {
+    .home-text {
+        text-align: center;
+    }
+}
+
+.banner-page {
+    .home-text {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner-home, .banner-page{
+        @include display-flex;
+        @include align-items-center;
+
+        .home-image {
+            @include col-6;
+        }
+
+        .home-text {
+            @include col-6;
+        }
+    }
+}
+
+.section-main-contacto {
+    text-align: center;
+
+    .menu-enlaces-sociales {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin: 0 0.25em;
+        font-size: 2em;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .section-main-contacto {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-main-contacto {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        display: table;
+    }
+
+    // pagina single post
+    .section-main-single {
+        display: block;
+    }
+
+    .section-main-single .articulo {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-main-blog, .section-main-single {
+        background-color: $blanco;
+        margin-right: 2em;
+    }
+}
+
+//imagen de articulo
+.wp-post-image {
+    @include centrar-imagen;
+}
+
+
+//cabecera de las paginas de categoria, etiqueta, ...
+.header-categories {
+	.post-categories {
+      	display: inline;
+      	@include reset-box;
+    }
+
+    li {
+      	display: inline;
+      	margin: 0 1em;
+      	font-weight: bold;
+    }
+}
+
+//articulo de index
+.articulo {
+	margin: 2em 0;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+
+    //titulo de articulo
+    &-titulo {
+        font-weight: normal;
+    }
+
+    //categoria del articulo
+    .post-categories {
+      	@include reset-box;
+      	border-bottom: 0.2em solid $rojo;
+      	list-style: none;
+
+      	li {
+        	display: inline-block;
+        	text-transform: uppercase;
+
+        	a {
+          		color: $negro;
+
+          		&:hover{
+          			color: $rojo;
+          		}
+        	}
+      	}
+    }
+
+    //info fecha y comentarios de articulo
+    .fecha-articulo, .icon-comments, .icon-comments a {
+      	font-size: small;
+      	color: $grisMedio;
+    }
+
+    .icon-comments {
+      	margin-bottom: 1em;
+
+      	a:hover {
+	      	color: $grisOscuro;
+    	}
+    }
+
+    //texto de articulo
+    p {
+      	text-align: justify;
+    }
+
+    //cuadros pre de articulo
+    pre {
+      	padding: 1em 0.3em;
+      	background-color: $grisClaro;
+      	@include border-radius(1em);
+    }
+
+    //estilo de imagen centrada
+    .aligncenter {
+      	@include centrar-imagen;
+    }
+
+    //boton de seguir leyendo
+    .more-link {
+      	display: block;
+      	width: 40%;
+      	background-color: $grisOscuro;
+      	color: $blanco;
+      	@include border-radius(0.5em);
+      	padding: 0.5em;
+      	margin-top: 0.7em;
+      	text-align: center;
+
+      	&:hover{
+      		background-color: $grisMedio;
+      	}
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .articulo {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+//numeros de paginas
+.page-numbers {
+   	width: 90%;
+    list-style: none;
+    @include reset-box;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color: $blanco;
+    clear: both;
+
+    li {
+      	display: inline-block;
+      	text-transform: uppercase;
+      	background-color: $rojo;
+      	padding: 0.5em;
+
+      	&:hover{
+      		background-color: $grisOscuro;
+      	}
+
+      	a:hover{
+      		color: $blanco;
+      	}
+    }
+
+    .current {
+      	color: $grisMedio;
+    }
+}
+
+.etiquetas{
+	padding-left: 5%;
+}
+
+//lista de comentarios
+.comentarios {
+   	max-width: 100%;
+    padding: 0 0 2% 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .etiquetas{
+        padding-left: 10%;
+    }
+
+    //lista de comentarios
+    .comentarios {
+        max-width: 100%;
+        padding: 0 0 2% 10%;
+    }
+}
+
+//pagina individual de blog
+.section-main-single{
+  h1 a{
+    color: $grisOscuro;
+  }
+
+	.articulo{
+		width: 90%;
+		max-width: 900px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2em 0;
+	}
+}
+
+.section-main-blog {
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .section-main-blog {
+        .articulo {
+            width: 43%;
+            display: inline-block;
+            margin: 2em 3%;
+        }
+    }
+}
+
+.sidebar {
+    width: 90%;
+    margin: 0 auto;
+
+  	hr {
+    	display: none;
+  	}
+
+  	h3 {
+    	margin-top: 3em;
+    	display: inline-block;
+    	color: $grisOscuro;
+    	text-transform: uppercase;
+    	font-weight: bold;
+    	border-bottom: 0.1em solid $rojo;
+  	}
+
+  	ul {
+	    @include reset-box;
+  	}
+}
+
+@media screen and (min-width: 1024px) {
+  	.sidebar {
+    	width: 25%;
+    	display: table-cell;
+    	vertical-align: top;
+    	padding-top: 2em;
+  	}
+}
+
+.search-input,
+.search-button {
+  	display: inline-block;
+  	border: 0.1em solid $grisMedio;
+  	@include border-radius(0.5em);
+  	outline: 0;
+}
+
+.search-input {
+  	padding: 0.4em;
+  	margin-right: 0;
+}
+
+.search-input:focus {
+  	border: 0.1em solid $rojo;
+}
+
+.search-button {
+  	margin-left: 0;
+  	padding: 0.4em 0.5em;
+  	background-color: $blanco;
+}
+
+.search-button:hover {
+  	background-color: $grisClaro;
+}
+
+.cat-item {
+  	list-style: none;
+
+  	a {
+		color: $grisOscuro;
+
+  		&:hover {
+    		color: $rojo;
+  		}
+	}
+}
+
+.cat-item:before {
+  	font-family: "icomoon";
+  	content: "\f07b";
+  	margin-right: 0.5em;
+  	color: $grisMedio;
+}
+
+.tagcloud{
+	a{
+  		color: $grisOscuro;
+
+  		&:hover{
+  			color: $rojo;
+  		}
+  	}
+}
+
+.cookie-message {
+  	position: fixed;
+  	bottom: 0;
+  	background-color: $grisOscuro;
+  	color: $blanco;
+  	display: none;
+
+  	a {
+    	text-decoration: underline;
+    	color: $blanco;
+  	}
+
+  	.close {
+	    color: $grisOscuro;
+	    background-color: $blanco;
+	    display: inline-block;
+    	border: none;
+    	margin-left: 0.5em;
+    	@include border-radius(0.5em);
+    	outline: 0;
+  	}
+}
+
+.Footer-main {
+  	width: 100%;
+  	background-color: $grisOscuro;
+  	display: inline-block;
+  	color: $blanco;
+  	text-align: center;
+  	margin-top: 1em;
+
+  	&-menu {
+	    padding-top: 0.3em;
+
+    	.menu {
+      		list-style: none;
+      		@include reset-box;
+    	}
+
+    	a {
+      		color: $blanco;
+
+      		&:hover{
+      			color: $rojo;
+      		}
+    	}
+  	}
+}

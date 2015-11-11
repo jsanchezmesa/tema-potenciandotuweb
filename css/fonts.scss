@@ -1,0 +1,81 @@
+@import "colors";
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?yceco2");
+  src: url("fonts/icomoon.eot?yceco2#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?yceco2") format("truetype"), url("fonts/icomoon.woff?yceco2") format("woff"), url("fonts/icomoon.svg?yceco2#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\f002";
+  color: $grisOscuro;
+}
+
+.icon-hideMenu:before {
+  content: "\f053";
+  color: $grisOscuro;
+}
+
+.icon-date:before {
+  content: "\f073";
+  color: $grisMedio;
+}
+
+.icon-category:before {
+  content: "\f07b";
+}
+
+.icon-twitter:before {
+  content: "\f081";
+  color: $colorTwitter;
+}
+
+.icon-facebook:before {
+  content: "\f082";
+  color: $colorFacebook;
+}
+
+.icon-comments:before {
+  content: "\f086";
+  color: $grisMedio;
+}
+
+.icon-linkedin:before {
+  content: "\f08c";
+  color: $colorLinkedin;
+}
+
+.icon-github:before {
+  content: "\f092";
+  color: $colorGithub;
+}
+
+.icon-showMenu:before {
+  content: "\f0c9";
+  color: $grisOscuro;
+}
+
+.icon-gplus:before {
+  content: "\f0d4";
+  color: $colorGplus;
+}
+
+.icon-email:before {
+  content: "\f1fa";
+  color: $grisOscuro;
+}
