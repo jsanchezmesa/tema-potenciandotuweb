@@ -8,7 +8,7 @@ body {
 }
 
 //fondo gris en desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   	body {
     	background-color: $grisClaro;
   	}
@@ -90,7 +90,7 @@ textarea {
 }
 
 //header en desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   	.Header {
     	margin-top: 0;
     	text-align: left;
@@ -186,7 +186,7 @@ textarea {
 }
 
 //menu en desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   	.MainMenu {
 	    background-color: $rojo;
 	    width: 60%;
@@ -337,7 +337,7 @@ textarea {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .section-main-contacto {
     width: 50%;
   }
@@ -358,7 +358,7 @@ textarea {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .section-main-blog, .section-main-single {
         background-color: $blanco;
         margin-right: 2em;
@@ -465,7 +465,7 @@ textarea {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .articulo {
         display: block;
         margin: 0 auto;
@@ -577,7 +577,7 @@ textarea {
   	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   	.sidebar {
     	width: 25%;
     	display: table-cell;
