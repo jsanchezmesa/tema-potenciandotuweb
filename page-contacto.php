@@ -15,19 +15,29 @@ get_header();
 			<p>Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo a través de alguno de los siguientes canales: </p>
 
 			<ul id="menu-enlaces-sociales" class="menu-enlaces-sociales">
-
 				<li>
-					<a href="mailto://potenciandotuweb@gmail.com" class="icon-email"></a>
+					<a href="mailto://sanchezmesaj@gmail.com" class="icon-email"></a>
 				</li>
 
 				<li>
-					<a href="https://twitter.com/potweb" class="icon-twitter"></a>
+					<a href="https://twitter.com/jsanchezmesa" class="icon-twitter"></a>
+				</li>
+
+				<li>
+					<a href="https://facebook.com/jsanchezmesacom" class="icon-facebook"></a>
 				</li>
 
 				<li>
 					<a href="http://github.com/jsanchezmesa" class="icon-github"></a>
 				</li>
 
+				<li>
+					<a href="https://es.linkedin.com/in/jsanchezmesa" class="icon-linkedin"></a>
+				</li>
+
+				<li>
+					<a href="https://plus.google.com/104588879958030211754/posts" class="icon-gplus"></a>
+				</li>
 			</ul>
 		</div>
 	</div>

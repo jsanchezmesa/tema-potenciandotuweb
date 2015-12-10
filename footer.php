@@ -22,9 +22,6 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/cookies.js"></script>
 <!-- fin mensaje cookies -->
 
-<!-- hammer.min.js -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/hammer.min.js"></script>
-
 <!-- menu responsive -->
 <script>
 $(document).ready(function(){
@@ -32,10 +29,6 @@ $(document).ready(function(){
       	var $buttonShowMenu = document.getElementById("showMenu");
         var $buttonHideMenu = document.getElementById("hideMenu");
         var $menu = document.getElementById("MainMenu");
-
-        var $body = document.querySelector("body");
-
-        var body = new Hammer($body);
 
         var showMenu = function(){
             $buttonShowMenu.classList.remove("is-active");
@@ -52,9 +45,6 @@ $(document).ready(function(){
         $buttonShowMenu.addEventListener("click", showMenu);
 
         $buttonHideMenu.addEventListener("click", hideMenu);
-
-        body.on("panright", showMenu);
-        body.on("panleft", hideMenu);
     }
 
 });

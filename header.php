@@ -28,7 +28,7 @@
 		<a href="<?php echo get_option('home'); ?>" class="Header-link">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"
 					alt="Logo" title="Logo" width="60" height="60" class="Header-logo">
-			<h1 class="Header-title">POTENCIANDOTUWEB</h1>
+			<h1 class="Header-title">JSANCHEZMESA</h1>
 		</a>
 
 		<?php wp_nav_menu( array(
