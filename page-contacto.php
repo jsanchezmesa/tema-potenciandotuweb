@@ -20,23 +20,23 @@ get_header();
 				</li>
 
 				<li>
-					<a href="https://twitter.com/jsanchezmesa" class="icon-twitter"></a>
+					<a href="https://twitter.com/jsanchezmesa" class="icon-twitter" target="_blank"></a>
 				</li>
 
 				<li>
-					<a href="https://facebook.com/jsanchezmesacom" class="icon-facebook"></a>
+					<a href="https://facebook.com/jsanchezmesacom" class="icon-facebook" target="_blank"></a>
 				</li>
 
 				<li>
-					<a href="http://github.com/jsanchezmesa" class="icon-github"></a>
+					<a href="http://github.com/jsanchezmesa" class="icon-github" target="_blank"></a>
 				</li>
 
 				<li>
-					<a href="https://es.linkedin.com/in/jsanchezmesa" class="icon-linkedin"></a>
+					<a href="https://es.linkedin.com/in/jsanchezmesa" class="icon-linkedin" target="_blank"></a>
 				</li>
 
 				<li>
-					<a href="https://plus.google.com/104588879958030211754/posts" class="icon-gplus"></a>
+					<a href="https://plus.google.com/104588879958030211754/posts" class="icon-gplus" target="_blank"></a>
 				</li>
 			</ul>
 		</div>
